@@ -23,7 +23,7 @@ export default class ArticlesList extends Vue{
   
   public article: string="";
   public articles: string="";
-  private articleService: ArticleService;
+  private articleService!: ArticleService;
 
  
   
@@ -35,7 +35,7 @@ export default class ArticlesList extends Vue{
   public async getArticlesData() {
     this.articleService.getArticles()
       .then(
-        (articles => {
+        ((articles: any) => {
           this.$set(this, "articles", articles);
         }).bind(this)
       );

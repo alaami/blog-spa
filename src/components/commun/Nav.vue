@@ -32,32 +32,32 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-
+import AuthService from '@/services/AuthService'
 @Component({
     components: {
   },
 })
 export default class Nav extends Vue{
-public currentUser: string="";
+public currentUser: any;
 public accessTokenExpired: boolean | undefined = false;
 public isLoggedIn: boolean= false;
-
+private auth0!: AuthService;
 
   get username(): string {
     return this.currentUser;
   }
 
   public login() {
-    this.$auth0.login();
+    this.auth0.login();
   }
 
   public logout() {
-      this.$auth0.logoutcustom(); 
+      this.auth0.logoutcustom(); 
   //  auth.logout();
   }
 
   public mounted() {
-    this.$auth0.getUser().then((user) => {
+    this.auth0.getUser().then((user) => {
       if (user !== null){
       this.currentUser = user.profile.name;
       this.accessTokenExpired = user.expired;

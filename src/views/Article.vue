@@ -44,6 +44,7 @@ import ArticleService from '@/services/ArticleService';
 import MarkdownItVue from 'markdown-it-vue'
 import 'markdown-it-vue/dist/markdown-it-vue.css'
 import VueDisqus from 'vue-disqus/dist/vue-disqus.vue'
+import AuthService from '@/services/AuthService'
 @Component({
     components: {MarkdownItVue,VueDisqus},
 })
@@ -51,6 +52,7 @@ export default class Article extends Vue{
  public article: any="";
  private articleService: ArticleService;
  private options: any="";
+ private auth0!: AuthService;
 
   created() {
     this.options= {
@@ -70,7 +72,7 @@ export default class Article extends Vue{
 
     public async getArticleData() {
    // Get the access token from the auth wrapper
-      const accessToken = await this.$auth0.getAccessToken()
+      const accessToken = await this.auth0.getAccessToken()
       // Use the eventService to call the getEventSingle() method
       this.articleService.getArticle(this.$route.params.link,accessToken)
       .then(
