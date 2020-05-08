@@ -2,11 +2,11 @@ import axios from "axios"
 
 export default class ArticleService {
   public async getArticles() {
-    const res = await axios.get("http://localhost:8000/api/articles");
+    const res = await axios.get(process.env.VUE_APP_API_MANAGER_URL + "/articles");
     return res.data;
   }
   public async getArticle(link: string,accessToken: string) {
-    const res = await axios.get("http://localhost:8000/api/article/" + link
+    const res = await axios.get(process.env.VUE_APP_API_MANAGER_URL + "/article/" + link
     ,{
      headers: {
       Authorization: `Bearer ${accessToken}`

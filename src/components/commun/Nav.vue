@@ -57,6 +57,7 @@ private auth0!: AuthService;
   }
 
   public mounted() {
+    this.auth0=new AuthService();
     this.auth0.getUser().then((user) => {
       if (user !== null){
       this.currentUser = user.profile.name;
