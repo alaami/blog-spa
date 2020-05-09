@@ -25,6 +25,7 @@
       "VUE_APP_REDIRECT_URI":"@redirect_uri",
       "VUE_APP_SILENT_REDIRECT_URI":"@silent_redirect_uri",
       "VUE_APP_POST_LOGOUT_REDIRECT_URI":"@logout_redirect_uri",
-      "VUE_APP_OIDC_KEY":"@oidc_key"
+      "VUE_APP_OIDC_KEY":"@oidc_key",
+      "VUE_APP_API_MANAGER_URL":"@api_gateway"
     }
   }
