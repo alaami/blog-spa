@@ -10,6 +10,7 @@ export default class AuthService {
         );
          // Log.logger = console;
           //Log.level = Log.DEBUG;
+          console.log(process.env.VUE_APP_CLIENT_ID);
         const settings: {}  = {
             // To use localStorage 
             //userStore: new WebStorageStateStore({ store: window.localStorage }),
