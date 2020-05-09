@@ -56,7 +56,7 @@ private auth0!: AuthService;
   //  auth.logout();
   }
 
-  public mounted() {
+  public created() {
     this.auth0=new AuthService();
     this.auth0.getUser().then((user) => {
       if (user !== null){
