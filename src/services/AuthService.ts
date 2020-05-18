@@ -42,7 +42,7 @@ export default class AuthService {
     }
 
     public login(): Promise<void> {
-       console.log(process.env.VUE_APP_CLIENT_ID);
+       console.log(process.env.VUE_APP_API_MANAGER_URL);
        return this.userManager.signinRedirect();
     }
 
