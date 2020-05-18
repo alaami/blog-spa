@@ -23,10 +23,7 @@ export default class ArticlesList extends Vue{
   
   public article: string="";
   public articles: string="";
-  private articleService!: ArticleService;
-
- 
-  
+  private articleService!: ArticleService;  
   created() {
     this.articleService = new ArticleService; 
     this.getArticlesData(); // NEW - call getEventData() when the instance is created

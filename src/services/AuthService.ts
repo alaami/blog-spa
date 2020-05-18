@@ -10,7 +10,6 @@ export default class AuthService {
         );
          // Log.logger = console;
           //Log.level = Log.DEBUG;
-          console.log(process.env.VUE_APP_CLIENT_ID);
         const settings: {}  = {
             // To use localStorage 
             //userStore: new WebStorageStateStore({ store: window.localStorage }),
@@ -43,6 +42,7 @@ export default class AuthService {
     }
 
     public login(): Promise<void> {
+       console.log(process.env.VUE_APP_CLIENT_ID);
        return this.userManager.signinRedirect();
     }
 

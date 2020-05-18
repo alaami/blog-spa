@@ -33,10 +33,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import AuthService from '@/services/AuthService'
+
 @Component({
     components: {
   },
 })
+
 export default class Nav extends Vue{
 public currentUser: any;
 public accessTokenExpired: boolean | undefined = false;
