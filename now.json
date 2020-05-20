@@ -2,8 +2,7 @@
     "name": "spa-blog-app",
     "version": 2,
     "builds": [
-      {"src": "package.json","use": "@now/static-build"},
-      { "src": "./services/ArticleService.ts", "use": "@now/node" }
+      {"src": "package.json","use": "@now/static-build"}
     ],
     "routes": [
       {
@@ -14,7 +13,6 @@
       { "src": ".*", "dest": "/" }
     ],
     "env": {
-      "VUE_APP_CLIENT_ID":"@client_id",
-      "VUE_APP_API_MANAGER_URL":"@api_gateway"
+
     }
   }
