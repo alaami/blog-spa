@@ -16,15 +16,6 @@
       { "src": ".*", "dest": "/" }
     ],
     "env": {
-      "VUE_APP_AUTOMATIC_SILENT_RENEW":"@automatic_silent",
-      "VUE_APP_RESPONSE_TYPE":"@response_type",
-      "VUE_APP_SCOPE":"@scope",
-      "VUE_APP_FILTER_PROTOCOL_CLAIMS":"@filter_protocol_claims",
-      "VUE_APP_AUTH0_DOMAIN":"@auth_url",
-      "VUE_APP_CLIENT_ID":"@client_id",
-      "VUE_APP_REDIRECT_URI":"@redirect_uri",
-      "VUE_APP_SILENT_REDIRECT_URI":"@silent_redirect_uri",
-      "VUE_APP_POST_LOGOUT_REDIRECT_URI":"@logout_redirect_uri",
       "VUE_APP_OIDC_KEY":"@oidc_key",
       "VUE_APP_API_MANAGER_URL":"@api_gateway"
     }
