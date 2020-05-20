@@ -16,7 +16,7 @@
       { "src": ".*", "dest": "/" }
     ],
     "env": {
-      "VUE_APP_OIDC_KEY":"@oidc_key",
+      "VUE_APP_CLIENT_ID":"@client_id",
       "VUE_APP_API_MANAGER_URL":"@api_gateway"
     }
   }
