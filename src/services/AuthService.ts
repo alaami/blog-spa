@@ -27,10 +27,10 @@ export default class AuthService {
             extraQueryParams: {audience: process.env.VUE_APP_AUDIENCE},
             metadata: {
                 issuer: process.env.VUE_APP_AUTH0_DOMAIN + "/",
-                authorization_endpoint: process.env.VUE_APP_AUTH0_DOMAIN + "/authorize",
-                userinfo_endpoint: process.env.VUE_APP_AUTH0_DOMAIN + "/userinfo",
-                end_session_endpoint: process.env.VUE_APP_AUTH0_DOMAIN + "/v2/logout",
-                jwks_uri: process.env.VUE_APP_AUTH0_DOMAIN + "/.well-known/jwks.json",
+                authorization_endpoint: process.env.VUE_APP_AUTH_DOMAIN + "/authorize",
+                userinfo_endpoint: process.env.VUE_APP_AUTH_DOMAIN + "/userinfo",
+                end_session_endpoint: process.env.VUE_APP_AUTH_DOMAIN + "/v2/logout",
+                jwks_uri: process.env.VUE_APP_AUTH_DOMAIN + "/.well-known/jwks.json",
             }
         };
 
@@ -42,7 +42,6 @@ export default class AuthService {
     }
 
     public login(): Promise<void> {
-       console.log(process.env);
        return this.userManager.signinRedirect();
     }
 
