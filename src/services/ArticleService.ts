@@ -10,7 +10,6 @@ export default class ArticleService {
     ,{
      headers: {
       Authorization: `Bearer ${accessToken}`
-    //Authorization: `Bearer vlMDvtAlat7pws9jfwQkXgqbupMOT63n`
     },      
     }
     );
