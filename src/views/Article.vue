@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                 <vue-disqus shortname="comments-app" :identifier="article._link"></vue-disqus>
+                 <vue-disqus shortname="comments-app" :identifier="article.link"></vue-disqus>
             </div>
            
             </section>
@@ -55,6 +55,7 @@ export default class Article extends Vue{
  private auth0!: AuthService;
 
   created() {
+    this.auth0=new AuthService();
     this.options= {
   markdownIt: {
     linkify: true
@@ -72,7 +73,7 @@ export default class Article extends Vue{
 
     public async getArticleData() {
    // Get the access token from the auth wrapper
-      const accessToken = await this.auth0.getAccessToken()
+      const accessToken = await this.auth0.getAccessToken();
       // Use the eventService to call the getEventSingle() method
       this.articleService.getArticle(this.$route.params.link,accessToken)
       .then(

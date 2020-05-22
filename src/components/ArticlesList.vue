@@ -2,7 +2,7 @@
   <div class="events container">
     <div class="columns is-multiline">
       <div v-for="article in articles" :article="article" :key="article.id" class="column is-one-quarter">
-        <router-link :to="`/article/${article._link}`">
+        <router-link :to="`/article/${article.link}`">
           <ArticleCard :article="article" />
         </router-link>
       </div>
