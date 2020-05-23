@@ -19,8 +19,8 @@
               <p class="subtitle is-6">Lead Developer</p>
           </div>
       </div>
-        <h2 class="is-size-4 has-text-weight-bold">{{ article.titre }}</h2>
-        <small class="event-date">{{ article.creationdate | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}</small>
+        <h2 class="is-size-4 has-text-weight-bold">{{ article.title }}</h2>
+        <small class="event-date">{{ article.createdAt | moment("dddd, MMMM Do YYYY, h:mm:ss a") }}</small>
           <div class="content">
               {{ article.description }}
           </div>

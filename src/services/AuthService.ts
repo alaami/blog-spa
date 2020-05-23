@@ -24,7 +24,7 @@ export default class AuthService {
             post_logout_redirect_uri: process.env.VUE_APP_POST_LOGOUT_REDIRECT_URI,
             filterProtocolClaims: true,
             response_mode: 'query',
-            extraQueryParams: {audience: process.env.VUE_APP_AUDIENCE},
+             extraQueryParams: {audience: process.env.VUE_APP_AUDIENCE},
             metadata: {
                 issuer: process.env.VUE_APP_AUTH0_DOMAIN + "/",
                 authorization_endpoint: process.env.VUE_APP_AUTH_DOMAIN + "/authorize",

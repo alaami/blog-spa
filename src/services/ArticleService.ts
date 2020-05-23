@@ -14,6 +14,6 @@ export default class ArticleService {
     }
     );
     
-    return res.data;
+    return res.data[0];
   }
 }

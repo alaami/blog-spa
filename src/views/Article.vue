@@ -18,15 +18,15 @@
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content has-text-centered">
-                                <p class="title article-title">{{article.titre}}</p>
+                                <p class="title article-title">{{article.title}}</p>
                                 <div class="tags has-addons level-item">
                                     <span class="tag is-rounded is-info">@Mralaa</span>
-                                    <span class="tag is-rounded">{{ article.creationdate | moment("dddd, MMMM Do YYYY") }}</span>
+                                    <span class="tag is-rounded">{{ article.createdAt | moment("dddd, MMMM Do YYYY") }}</span>
                                 </div>
                             </div>
                         </div>
                         <div class="content article-body">
-                            <markdown-it-vue class="md-body" :content="article.contenu" :options="options" />
+                            <markdown-it-vue class="md-body" :content="article.content" :options="options" />
                         </div>
                     </div>
                 </div>
@@ -75,6 +75,7 @@ export default class Article extends Vue{
    // Get the access token from the auth wrapper
       const accessToken = await this.auth0.getAccessToken();
       // Use the eventService to call the getEventSingle() method
+      
       this.articleService.getArticle(this.$route.params.link,accessToken)
       .then(
         (article => {
