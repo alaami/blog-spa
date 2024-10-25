@@ -19,7 +19,7 @@
     "mdbvue": "^6.6.0",
     "oidc-client": "^1.10.1",
     "save-dev": "0.0.1-security",
-    "vue": "^2.6.11",
+    "vue": "^3.0.0",
     "vue-class-component": "^7.2.3",
     "vue-disqus": "^3.0.5",
     "vue-markdown": "^2.2.4",
